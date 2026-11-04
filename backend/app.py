@@ -17,10 +17,21 @@ load_dotenv()
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = os.getenv("FLASK_SECRET_KEY")
-CORS(app, supports_credentials=True, origins=[
+frontend_url = os.getenv("FRONTEND_URL", "")
+
+allowed_origins = [
     "http://localhost:5173",
     "http://127.0.0.1:5173"
-])
+]
+
+if frontend_url:
+    allowed_origins.append(frontend_url.rstrip("/"))
+
+CORS(
+    app,
+    supports_credentials=True,
+    origins=allowed_origins
+)
 
 app.config["SECRET_KEY"] = os.getenv("FLASK_SECRET_KEY") or secrets.token_hex(32)
 app.config["SESSION_COOKIE_HTTPONLY"] = True
@@ -29,10 +40,16 @@ app.config["SESSION_COOKIE_SECURE"] = False  # Set True when deployed with HTTPS
 
 app.config["MAX_CONTENT_LENGTH"] = 8 * 1024 * 1024
 
-# Tesseract OCR path
-pytesseract.pytesseract.tesseract_cmd = (
-    r"C:\Program Files\Tesseract-OCR\tesseract.exe"
-)
+
+# Tesseract OCR path (Windows and Linux)
+tesseract_cmd = os.getenv("TESSERACT_CMD")
+
+if tesseract_cmd:
+    pytesseract.pytesseract.tesseract_cmd = tesseract_cmd
+elif os.name == "nt":
+    pytesseract.pytesseract.tesseract_cmd = (
+        r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+    )
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 UPLOAD_FOLDER = os.path.join(BASE_DIR, "uploads")
