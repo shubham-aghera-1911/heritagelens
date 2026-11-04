@@ -1,0 +1,422 @@
+
+/* Admin Login Page */
+
+.admin-login-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  background: #f2f0e8;
+  font-family: Arial, sans-serif;
+}
+
+.admin-login-card {
+  width: 100%;
+  max-width: 420px;
+  padding: 38px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 12px 40px rgba(36, 54, 75, 0.12)
+}
+
+.admin-login-icon {
+  width: 65px;
+  height: 65px;
+  margin: 0 auto 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 18px;
+  background: #E8EDF2;
+  color: #24364B;
+}
+
+.admin-login-card h1 {
+  margin: 0;
+  text-align: center;
+  color: #24364B;
+  font-size: 28px;
+}
+
+.admin-login-card > p {
+  margin: 10px 0 30px;
+  text-align: center;
+  color: #777;
+  font-size: 14px;
+}
+
+.admin-login-card label {
+  display: block;
+  margin: 18px 0 8px;
+  color: #344B63;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.admin-input-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 13px;
+  border: 1px solid #d9ded9;
+  border-radius: 9px;
+  color: #64748B;
+}
+
+.admin-input-box:focus-within {
+  border-color: #C7A77A;
+}
+
+.admin-input-box input {
+  width: 100%;
+  height: 46px;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+}
+
+.admin-login-card button {
+  width: 100%;
+  margin-top: 25px;
+  padding: 14px;
+  border: none;
+  border-radius: 9px;
+  background: #24364B;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.admin-login-card button:hover {
+  background: #24364B;
+}
+
+.admin-login-card button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.admin-error {
+  margin-top: 14px;
+  color: #c0392b;
+  font-size: 13px;
+}
+
+.admin-back-link {
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+  color: #C7A77A;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* ==============================
+   ADMIN DASHBOARD
+================================ */
+
+.admin-dashboard {
+  min-height: 100vh;
+  background: #F7F4EC;
+  color: #24364B;
+  font-family: Arial, sans-serif;
+}
+
+.admin-header {
+  background: #24364B;
+  color: white;
+  padding: 24px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.admin-header h1 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+  font-size: 26px;
+}
+
+.admin-header p {
+  margin: 8px 0 0;
+  color: #cbd9cf;
+}
+
+.admin-logout,
+.admin-refresh {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 17px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.admin-logout {
+  background: white;
+  color: #24364B;
+}
+
+.admin-content {
+  width: 90%;
+  max-width: 1250px;
+  margin: 35px auto;
+}
+
+.admin-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 35px;
+}
+
+.admin-stat-card {
+  padding: 24px;
+  background: white;
+  border-radius: 13px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.admin-stat-card svg {
+  color: #C7A77A;
+  width: 27px;
+  height: 27px;
+}
+
+.admin-stat-card span {
+  color: #718077;
+  font-size: 14px;
+}
+
+.admin-stat-card strong {
+  font-size: 29px;
+  color: #24364B;
+}
+
+.admin-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.admin-tabs {
+  display: flex;
+  gap: 10px;
+}
+
+.admin-tabs button {
+  padding: 12px 20px;
+  border: 1px solid #dce5dd;
+  border-radius: 8px;
+  background: white;
+  color: #344B63;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.admin-tabs button.active {
+  background: #24364B;
+  color: white;
+  border-color: #24364B;
+}
+
+.admin-refresh {
+  background: #E8EDF2;
+  color: #24364B;
+}
+
+.admin-list {
+  padding: 25px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+}
+
+.admin-list h2 {
+  margin: 0 0 22px;
+  color: #24364B;
+}
+
+.admin-item {
+  display: flex;
+  gap: 22px;
+  padding: 20px 0;
+  border-bottom: 1px solid #e8eee9;
+}
+
+.admin-item img {
+  width: 180px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  background: #edf0ed;
+}
+
+.admin-item-info {
+  flex: 1;
+}
+
+.admin-item-info h3,
+.admin-place-item h3 {
+  margin: 0 0 10px;
+  color: #24364B;
+}
+
+.admin-item-info p,
+.admin-place-item p {
+  color: #68766d;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.admin-place-item {
+  padding: 20px 0;
+  border-bottom: 1px solid #e8eee9;
+}
+
+.admin-actions {
+  display: flex;
+  gap: 9px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
+.admin-actions button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 13px;
+  border: none;
+  border-radius: 7px;
+  background: #E8EDF2;
+  color: #24364B;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.admin-actions button:hover {
+  opacity: 0.8;
+}
+
+.admin-actions button.delete {
+  background: #fde9e7;
+  color: #b83227;
+}
+
+@media (max-width: 850px) {
+  .admin-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  .admin-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .admin-header h1 {
+    font-size: 21px;
+  }
+
+  .admin-content {
+    width: 94%;
+  }
+
+  .admin-stats {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .admin-stat-card {
+    padding: 15px;
+  }
+
+  .admin-item {
+    flex-direction: column;
+  }
+
+  .admin-item img {
+    width: 100%;
+    height: 190px;
+  }
+
+  .admin-list {
+    padding: 16px;
+  }
+}
+.monument-media-manager {
+  width: 100%;
+  margin-top: 18px;
+  padding: 16px;
+  border: 1px solid rgba(128, 128, 128, 0.3);
+  border-radius: 12px;
+}
+
+.monument-media-manager h4 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+.monument-media-manager input[type="file"] {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.monument-media-manager button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.admin-cover-preview {
+  display: block;
+  width: 180px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+.admin-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.admin-gallery-image img {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.admin-gallery-image button {
+  margin-top: 5px;
+}
+
+
+
+

@@ -1,0 +1,116 @@
+
+.viewer-page {
+  min-height: 100vh;
+  background: #F7F4EC;
+  color: #24364B;
+  font-family: Arial, sans-serif;
+}
+
+.viewer-header {
+  height: 76px;
+  padding: 0 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #deded2;
+}
+
+.viewer-brand,
+.viewer-back {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #24364B;
+  font-weight: bold;
+}
+
+.viewer-main {
+  max-width: 1250px;
+  margin: auto;
+  padding: 55px 25px;
+}
+
+.viewer-title {
+  margin-bottom: 28px;
+}
+
+.viewer-title > span {
+  color: #927044;
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.viewer-title h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(40px, 6vw, 65px);
+  margin: 12px 0;
+}
+
+.viewer-title h1 em {
+  color: #927044;
+  font-weight: normal;
+}
+
+.viewer-title p {
+  color: #777b70;
+}
+
+.sketchfab-container {
+  width: 100%;
+  height: 600px;
+  background: #E8EDF2;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.sketchfab-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.viewer-instructions {
+  margin-top: 22px;
+  padding: 20px;
+  background: #F7F4EC;
+  border: 1px solid #e5e2d8;
+  border-radius: 6px;
+}
+
+.viewer-instructions > div {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.viewer-instructions span {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.viewer-instructions small,
+.viewer-credit {
+  color: #777b70;
+}
+
+.viewer-credit {
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+@media (max-width: 650px) {
+  .viewer-header {
+    padding: 0 5%;
+  }
+
+  .viewer-main {
+    padding: 35px 15px;
+  }
+
+  .sketchfab-container {
+    height: 420px;
+  }
+}
